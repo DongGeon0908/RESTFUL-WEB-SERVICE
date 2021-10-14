@@ -33,6 +33,7 @@ public class HelloWorldController {
     }
 
     // 다국어 처리
+    // RequestHeader(name = "Accept-Language", required = false) Locale locale 헤더값 지정
     @GetMapping(path = "/hello-world-internationalized")
     public String helloWorldInternationalized(@RequestHeader(name = "Accept-Language", required = false) Locale locale) {
         return messageSource.getMessage("greeting.message", null, locale);
