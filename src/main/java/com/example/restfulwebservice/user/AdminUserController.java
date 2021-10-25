@@ -26,9 +26,9 @@ public class AdminUserController {
     public MappingJacksonValue retrieveAllUsers() {
         final List<User> users = service.findAll();
 
-        // 필터링을 통해 출력시킴
+        // 필터링을 통해 특정 데이터를 추출하여 출력시킴
         SimpleBeanPropertyFilter filter = SimpleBeanPropertyFilter
-                .filterOutAllExcept("id", "password", "ssn");
+                .filterOutAllExcept("id", "name", "joinDate", "password");
 
         FilterProvider filterProvider = new SimpleFilterProvider().addFilter("UserInfo", filter);
 
