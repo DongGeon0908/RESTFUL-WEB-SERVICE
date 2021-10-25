@@ -44,6 +44,12 @@ dependencies {
 
     // Basic-Security
     implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // JPA
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // h2
+    implementation 'com.h2database:h2'
 }
 
 test {
