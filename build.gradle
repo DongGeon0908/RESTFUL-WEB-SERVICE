@@ -41,6 +41,9 @@ dependencies {
 
     // hal-browser for REST API
     implementation 'org.springframework.data:spring-data-rest-hal-explorer'
+
+    // Basic-Security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
 }
 
 test {
