@@ -12,9 +12,11 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -45,4 +47,14 @@ public class User {
     // @JsonIgnore // 해당 필드를 무시해 달라! <- 전달하지말아라!, 필드로 지정 가능
     @ApiModelProperty(notes = "사용자의 주민등록번호를 입력해 주세요")
     private String ssn;
+
+    @OneToMany(mappedBy = "user")
+    private List<Post> posts;
+
+    public User(int id, String name, Date joinDate, String password, String ssn) {
+        this.id = id;
+        this.name = name;
+        this.password = password;
+        this.ssn = ssn;
+    }
 }
