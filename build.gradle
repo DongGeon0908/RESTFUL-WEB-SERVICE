@@ -35,6 +35,9 @@ dependencies {
 
     // swagger DI
     implementation 'io.springfox:springfox-boot-starter:3.0.0';
+
+    // Monitoring
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
 }
 
 test {
