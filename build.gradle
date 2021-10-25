@@ -38,6 +38,9 @@ dependencies {
 
     // Monitoring
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    // hal-browser for REST API
+    implementation 'org.springframework.data:spring-data-rest-hal-explorer'
 }
 
 test {
